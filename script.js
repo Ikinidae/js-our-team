@@ -33,15 +33,27 @@ const members = [
 
 var img1 = document.createElement("img");
 img1.src = members[1].Foto;
-const div = document.getElementsByClassName("card-image");
-div.appendChild(img1);
+const imgDiv = document.getElementsByClassName("card-image");
+imgDiv[0].appendChild(img1);
 
-// var h31 = document.createElement("h3");
-// h31 = members[1].Nome;
-// const pippo = document.getElementById("card-text");
-// pippo.classList.add("")
-// pippo.append(h31);
+var h31 = document.createElement("h3");
+h31 = members[1].Nome;
+const textDiv = document.getElementsByClassName("card-text");
+textDiv[0].append(h31);
 
-// var p1 = document.createElement("p");
-// p1 = members[1].Ruolo;
-// pippo.append(p1);
+var p1 = document.createElement("p");
+p1 = members[1].Ruolo;
+textDiv[0].append(p1);
+
+// const teamCont = document.getElementsByClassName("team-container");
+
+// function help (numEl) {
+//     var img(numEl) = document.createElement("img");
+//     img(numEl).src = members[numEl].Foto;
+//     const imgDiv = document.getElementsByClassName("card-image");
+//     imgDiv[numEl].appendChild(img(numEl));
+// }
+
+// for (i=0; teamCont.length < 5; i++) {
+//     help(0);
+// }
