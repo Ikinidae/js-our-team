@@ -31,85 +31,122 @@ const members = [
     }
 ]
 
+// collegamento con il container
+let container = document.querySelector(".team-container");
+
+// ciclo for per inserire div "card-image" e "card-text" con all'interno i dati
+for (let i = 0; i < members.length; i++) {
+    let divCard = document.createElement("div");
+    divCard.classList.add("team-card");
+    container.append(divCard);
+
+    let divImage = document.createElement("div");
+    divImage.classList.add("card-image");
+    divCard.append(divImage);
+
+    let img = document.createElement("img");
+    img.src = members[i].Foto;
+    divImage.append(img);
+
+    let divText = document.createElement("div");
+    divText.classList.add("card-text");
+    divCard.append(divText);
+
+    let h3Tag = document.createElement("h3");
+    divText.append(h3Tag);
+    let h3Text = document.createTextNode(members[i].Nome);
+    h3Tag.append(h3Text);
+
+
+    let pTag = document.createElement("p");
+    divText.append(pTag);
+    let pText = document.createTextNode(members[i].Ruolo);
+    pTag.append(pText);
+}
+
+
+
+
+
 // comandi per prima card
-var img1 = document.createElement("img");
-img1.src = members[0].Foto;
-const imgDiv = document.getElementsByClassName("card-image");
-imgDiv[0].appendChild(img1);
+// var img1 = document.createElement("img");
+// img1.src = members[0].Foto;
+// const imgDiv = document.getElementsByClassName("card-image");
+// imgDiv[0].appendChild(img1);
 
-var h31 = document.createElement("h3");
-h31 = members[0].Nome;
-const textDiv = document.getElementsByClassName("card-text");
-textDiv[0].append(h31);
+// var h31 = document.createElement("h3");
+// h31 = members[0].Nome;
+// const textDiv = document.getElementsByClassName("card-text");
+// textDiv[0].append(h31);
 
-var p1 = document.createElement("p");
-p1 = members[0].Ruolo;
-textDiv[0].append(p1);
+// var p1 = document.createElement("p");
+// p1 = members[0].Ruolo;
+// textDiv[0].append(p1);
 
 // comandi per seconda card
-var img2 = document.createElement("img");
-img2.src = members[1].Foto;
-imgDiv[1].appendChild(img2);
+// var img2 = document.createElement("img");
+// img2.src = members[1].Foto;
+// imgDiv[1].appendChild(img2);
 
-var h32 = document.createElement("h3");
-h32 = members[1].Nome;
-textDiv[1].append(h32);
+// var h32 = document.createElement("h3");
+// h32 = members[1].Nome;
+// textDiv[1].append(h32);
 
-var p2 = document.createElement("p");
-p2 = members[1].Ruolo;
-textDiv[1].append(p2);
+// var p2 = document.createElement("p");
+// p2 = members[1].Ruolo;
+// textDiv[1].append(p2);
 
 // comandi per terza card
-var img3 = document.createElement("img");
-img3.src = members[2].Foto;
-imgDiv[2].appendChild(img3);
+// var img3 = document.createElement("img");
+// img3.src = members[2].Foto;
+// imgDiv[2].appendChild(img3);
 
-var h33 = document.createElement("h3");
-h33 = members[2].Nome;
-textDiv[2].append(h33);
+// var h33 = document.createElement("h3");
+// h33 = members[2].Nome;
+// textDiv[2].append(h33);
 
-var p3 = document.createElement("p");
-p3 = members[2].Ruolo;
-textDiv[2].append(p3);
+// var p3 = document.createElement("p");
+// p3 = members[2].Ruolo;
+// textDiv[2].append(p3);
 
 // comandi per quarta card
-var img4 = document.createElement("img");
-img4.src = members[3].Foto;
-imgDiv[3].appendChild(img4);
+// var img4 = document.createElement("img");
+// img4.src = members[3].Foto;
+// imgDiv[3].appendChild(img4);
 
-var h34 = document.createElement("h3");
-h34 = members[3].Nome;
-textDiv[3].append(h34);
+// var h34 = document.createElement("h3");
+// h34 = members[3].Nome;
+// textDiv[3].append(h34);
 
-var p4 = document.createElement("p");
-p4 = members[3].Ruolo;
-textDiv[3].append(p4);
+// var p4 = document.createElement("p");
+// p4 = members[3].Ruolo;
+// textDiv[3].append(p4);
 
 // comandi per quinta card
-var img5 = document.createElement("img");
-img5.src = members[4].Foto;
-imgDiv[4].appendChild(img5);
+// var img5 = document.createElement("img");
+// img5.src = members[4].Foto;
+// imgDiv[4].appendChild(img5);
 
-var h35 = document.createElement("h3");
-h35 = members[4].Nome;
-textDiv[4].append(h35);
+// var h35 = document.createElement("h3");
+// h35 = members[4].Nome;
+// textDiv[4].append(h35);
 
-var p5 = document.createElement("p");
-p5 = members[4].Ruolo;
-textDiv[4].append(p5);
+// var p5 = document.createElement("p");
+// p5 = members[4].Ruolo;
+// textDiv[4].append(p5);
 
 // comandi per sesta card
-var img6 = document.createElement("img");
-img6.src = members[5].Foto;
-imgDiv[5].appendChild(img6);
+// var img6 = document.createElement("img");
+// img6.src = members[5].Foto;
+// imgDiv[5].appendChild(img6);
 
-var h36 = document.createElement("h3");
-h36 = members[5].Nome;
-textDiv[5].append(h36);
+// var h36 = document.createElement("h3");
+// h36 = members[5].Nome;
+// textDiv[5].append(h36);
 
-var p6 = document.createElement("p");
-p6 = members[5].Ruolo;
-textDiv[5].append(p6);
+// var p6 = document.createElement("p");
+// p6 = members[5].Ruolo;
+// textDiv[5].append(p6);
 
 // function help (numEl) {
 //     var img(numEl) = document.createElement("img");
